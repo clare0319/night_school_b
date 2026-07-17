@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>밤학교에서 - 2학년 교실 선택</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            margin: 0;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='학교.png') }}");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }        .dialog-box {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 25%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.2em;
+            z-index: 2;
+        }
+        .choices {
+            position: absolute;
+            bottom: 35%;
+            right: 5%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            z-index: 3;
+        }
+        .choice-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px 25px;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            width: auto;
+            max-width: 400px;
+        }
+        .bag-button-container {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            z-index: 4;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+
+    <div class="bag-button-container">
+        <button class="choice-button" onclick="window.openItemModal(); return false;">아이템</button>
+    </div>
+
+    <div class="choices">
+        <a href="/class_2_1"><button class="choice-button">2학년 1반</button></a>
+        <a href="/class_2_2"><button class="choice-button">2학년 2반</button></a>
+        <a href="/class_2_3"><button class="choice-button">2학년 3반</button></a>
+        <a href="/class_2_4"><button class="choice-button">2학년 4반</button></a>
+        <a href="/second_floor"><button class="choice-button">나가기</button></a>
+    </div>
+
+    <div class="dialog-box">
+        <p>어디를 탐색할까?</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='item_modal.js') }}"></script>
+</body>
+</html>
+

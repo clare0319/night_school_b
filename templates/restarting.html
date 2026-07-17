@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>밤학교에서 - 초기화 중</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 3em;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+
+    <p>초기화 중입니다...</p>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "/"; // 3초 후 메인 페이지로 이동
+        }, 3000);
+    </script>
+
+</body>
+</html>

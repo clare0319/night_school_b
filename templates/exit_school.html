@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>밤학교에서</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div id="message"></div>
+
+    <script>
+        function startSequence() {
+            const messages = [
+                "그렇게 나는 학교를 나왔다.",
+                "한참을 걸어 집으로 돌아간다.",
+                "숙제는... 이 정도는 못해가도 괜찮겠지?",
+                "엔딩1 귀가"
+            ];
+
+            let index = 0;
+
+            function showMessage() {
+                if (index < messages.length) {
+                    document.getElementById('message').innerText = messages[index];
+                    index++;
+                    setTimeout(showMessage, 3000);
+                } else {
+                    setTimeout(() => {
+                        window.location.href = "/";
+                    }, 3000);
+                }
+            }
+
+            showMessage();
+        }
+
+        window.onload = startSequence;
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>5층계단</title>
+    <meta http-equiv="refresh" content="2;url=/fourth_floor">
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Reverted to white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 2em;
+            font-family: "Malgun Gothic", sans-serif; /* Reverted to original font */
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='학교.png') }}");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <!-- 깨진 안내 대사를 올바르게 복원했습니다 -->
+    <p>나중에 가보자</p>
+</body>
+</html>

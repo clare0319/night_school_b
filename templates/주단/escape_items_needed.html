@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>주단</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('/static/동아리실.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+        .dialog-box {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 25%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.2em;
+            z-index: 2;
+        }
+        .choices {
+            position: absolute;
+            bottom: 35%;
+            right: 5%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            z-index: 3;
+        }
+        .choice-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px 25px;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            width: auto;
+            max-width: 400px;
+        }
+        .character-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .character-image {
+            position: fixed;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            transform-origin: bottom center;
+            bottom: calc(var(--ui-dialog-bottom) + var(--ui-dialog-height) - 6px) !important;
+            width: min(78vw, 1080px) !important;
+            max-width: none !important;
+            max-height: calc(100vh - (var(--ui-dialog-bottom) + var(--ui-dialog-height)));
+            height: auto;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 2;
+        }
+        #joodan1 {
+            opacity: 1.0;
+        }
+        #joodan2 {
+            opacity: 1.0;
+            filter: brightness(0.8);
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div class="character-container">
+        <img id="joodan1" class="character-image" src="/static/주단1.png" alt="joodan1">
+        <img id="joodan2" class="character-image" src="/static/주단2.png" alt="joodan2">
+    </div>
+
+    <div class="choices">
+        <a href="/joodan_check_items"><button class="choice-button">응...?
+            누굴 만난다는거야?
+        </button></a>
+    </div>
+
+    <div class="dialog-box">
+        <p>주단 : 여기서 나가려면 열쇠가 필요한데 안타깝게도 교무실에는 열쇠가 없죠. 그래서 다른 분의 도움을 받아야 합니다.
+            그분을 만나기 위해서는 세 가지 물건이 필요합니다. 노래가 담긴 카세트 테이프, 테이프를 재생할 라디오, 그리고 악보입니다.</p>
+    </div>
+</body>
+</html>

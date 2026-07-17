@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3층 화장실</title>
+    <style>
+        body {
+            background-color: black; /* Added */
+            color: white; /* Reverted to white */
+            font-family: sans-serif; /* Reverted to original font */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 50px;
+            position: relative; /* Added for ::before */
+            overflow: hidden; /* Added for ::before */
+        }
+        body::before { /* Added */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='화장실.png') }}"); /* Moved from body */
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1; /* Added z-index */
+        }
+        .explore-button {
+            background-color: rgba(0, 0, 0, 0.7); /* Reverted to original */
+            color: white; /* Reverted to white */
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            border: 1px solid white; /* Reverted to original */
+        }
+        .explore-button:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Reverted hover effect */
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <a href="{{ url_for('chaeyul_why_mirror') }}" class="explore-button">탐색하기</a>
+</body>
+</html>

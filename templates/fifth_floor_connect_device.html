@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>5층탐색</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Reverted to white */
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif; /* Reverted to original font */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 50px;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/static/강당.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        .dialogue-box {
+            background-color: rgba(0, 0, 0, 0.4); /* Reverted to original */
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 80%;
+            border: 1px solid white; /* Reverted to original */
+            color: white; /* Reverted to original */
+        }
+        .dialogue {
+            font-size: 22px;
+        }
+        .options a {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.4); /* Reverted to original */
+            border: 1px solid white; /* Reverted to original */
+            color: white; /* Reverted to original */
+            padding: 15px;
+            margin: 10px auto;
+            max-width: 70%;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        .options a:hover {
+            background-color: #333;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="dialogue-box">
+            {% if has_radio %}
+            <!-- 라디오를 소지하고 있을 때의 깨진 대사를 복원했습니다 -->
+            <p class="dialogue">전기 콘센트다. 여기에 전자기기를 연결할수 있을것 같다. 뭘 연결해보지</p>
+            {% else %}
+            <!-- 라디오가 없을 때의 깨진 대사를 복원했습니다 -->
+            <p class="dialogue">단상 왼쪽에 콘센트가 있다. 무언가를 설치할수 있을것 같다. 설치할 것을 찾아볼까?</p>
+            {% endif %}
+        </div>
+        <div class="options">
+            {% if has_radio %}
+            <!-- 라디오 설치 링크 텍스트를 복원했습니다 -->
+            <a href="/fifth_floor_install_radio_process">(라디오 설치하기)</a>
+            {% endif %}
+            <!-- 돌아가기 버튼 텍스트를 복원했습니다 -->
+            <a href="/fifth_floor/main">돌아가기</a>
+        </div>
+    </div>
+</body>
+</html>

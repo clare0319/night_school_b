@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- 브라우저가 한글을 올바르게 인식하도록 meta 태그를 추가했습니다 -->
+    <meta charset="UTF-8">
+    <title>밤학교에서 - 성공</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div id="message">후우... 힘든일이 많았다</div>
+
+    <script>
+        setTimeout(() => {
+            // 1. "그래도 나는 성공했다..." 메시지 표시
+            document.getElementById('message').innerText = '그래도 나는 성공했다. 이제 집에가면.. 숙제를 해야겠구만.';
+
+            // 2. 2초 후 "엔딩 2" 표시
+            setTimeout(() => {
+                document.getElementById('message').innerText = '엔딩 2. 무사귀가';
+
+                // 3. 3초 후 메인 페이지로 이동
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 3000);
+            }, 2000);
+        }, 2000); // 맨 처음 2초 딜레이
+    </script>
+</body>
+</html>

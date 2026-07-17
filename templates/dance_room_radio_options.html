@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>무용실 - 라디오 있음</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: "Malgun Gothic", sans-serif;
+            background-image: url('/static/무용실.png'); /* Assuming dance room background */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 50px;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        .dialogue-box {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px auto;
+            max-width: 80%;
+            border: 1px solid white;
+        }
+        .dialogue {
+            font-size: 22px;
+        }
+        .options a {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid white;
+            color: white;
+            padding: 15px;
+            margin: 10px auto;
+            max-width: 70%;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+        .options a:hover {
+            background-color: #333;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="dialogue-box">
+            <p class="dialogue">무용실이다. 라디오가 있다. 무엇을 탐색해볼까?</p>
+        </div>
+        <div class="options">
+            <a href="/play_cassette_tape">라디오 듣기</a>
+            <a href="/dance_room">나가기</a>
+        </div>
+    </div>
+</body>
+</html>
+

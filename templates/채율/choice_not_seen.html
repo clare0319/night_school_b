@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>채율</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('/static/거울.png');
+            background-size: cover;
+            background-position: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }        .dialog-box {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: 25%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 1.2em;
+            z-index: 2;
+        }
+        .choices {
+            position: absolute;
+            bottom: 35%;
+            right: 5%;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            z-index: 3;
+        }
+        .choice-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px 25px;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1em;
+            cursor: pointer;
+            width: auto;
+            max-width: 400px;
+        }
+        .character-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            z-index: 2;
+        }
+        .character-image {
+            position: absolute;
+            bottom: 25%;
+            max-width: 50%;
+            height: auto;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #chaeyul1 {
+            opacity: 0.7;
+        }
+        #chaeyul2 {
+            opacity: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div class="choices">
+        <a href="{{ url_for('restroom_3f') }}"><button class="choice-button">계속</button></a>
+    </div>
+
+    <div class="dialog-box">
+        <p>"...그렇구나. 알겠어."</p>
+    </div>
+</body>
+</html>
+
+

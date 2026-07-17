@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>밤학교에서 - 교무실</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --edge-margin: clamp(20px, 3vw, 40px);
+            --dialog-bottom: clamp(18px, 2.8vh, 30px);
+            --dialog-height: clamp(120px, 22vh, 170px);
+            --choice-gap: clamp(8px, 1.1vh, 12px);
+            --panel-width: min(92vw, 1120px);
+            --panel-offset: calc((100vw - var(--panel-width)) / 2);
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url("{{ url_for('static', filename='교무실.png') }}");
+            background-size: cover;
+            background-position: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+        .ui-layer {
+            position: fixed !important;
+            inset: 0 !important;
+            pointer-events: none !important;
+            z-index: 2 !important;
+        }
+        .ui-layer .dialog-box {
+            position: fixed !important;
+            left: 50vw !important;
+            bottom: var(--dialog-bottom) !important;
+            transform: translateX(-50%) !important;
+            width: var(--panel-width) !important;
+            min-height: var(--dialog-height) !important;
+            height: auto !important;
+            background-color: rgba(255, 255, 255, 0.5) !important;
+            border-radius: 15px !important;
+            padding: clamp(16px, 2.2vw, 24px) !important;
+            box-sizing: border-box !important;
+            color: black !important;
+            font-size: clamp(1rem, 1.2vw, 1.2em) !important;
+            pointer-events: auto !important;
+        }
+        .ui-layer .choices {
+            position: fixed !important;
+            left: 50vw !important;
+            bottom: calc(var(--dialog-bottom) + var(--dialog-height) + 16px) !important;
+            transform: translateX(-50%) !important;
+            width: var(--panel-width) !important;
+            max-width: 1120px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-end !important;
+            gap: var(--choice-gap) !important;
+            pointer-events: auto !important;
+            z-index: 3 !important;
+        }
+        .choices a,
+        .choices button {
+            pointer-events: auto;
+        }
+        .choice-button {
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: clamp(8px, 1.1vw, 12px) clamp(16px, 2.2vw, 24px);
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: clamp(0.95rem, 1vw, 1rem);
+            cursor: pointer;
+            width: auto;
+            max-width: min(400px, 80vw);
+        }
+        .bag-button-container {
+            position: fixed !important;
+            top: clamp(18px, 2.6vw, 32px) !important;
+            left: calc(50vw - var(--panel-width) / 2 + clamp(10px, 1.4vw, 18px)) !important;
+            z-index: 4 !important;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+
+    <div class="bag-button-container">
+        <button class="choice-button" onclick="window.openItemModal(); return false;">아이템</button>
+    </div>
+
+    <div class="ui-layer">
+        <div class="choices">
+            <a href="/office_explore"><button class="choice-button">탐색하기</button></a>
+            <a href="/first_floor"><button class="choice-button">나가기</button></a>
+        </div>
+
+        <div class="dialog-box">
+            <p>{{ message or '교무실이다. 무엇을 탐색해볼까?' }}</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='item_modal.js') }}"></script>
+</body>
+</html>
+

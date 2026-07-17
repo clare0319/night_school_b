@@ -1,0 +1,159 @@
+﻿templates\bag.html:67: <p>?꾩쭅 ?띾뱷???꾩씠?쒖씠 ?놁뒿?덈떎.</p>
+templates\bag.html:172: <p>?꾩쭅 ?띾뱷???꾩씠?쒖씠 ?놁뒿?덈떎.</p>
+templates\class_1_1.html:79: <p>1학년 1諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_1_1_explore.html:4: <title>밤학교에서 - 1학년 1반?먯깋</title>
+templates\class_1_1_explore.html:85: <a href="/class_1_1_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_1_2.html:79: <p>1학년 2諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_1_2_explore.html:4: <title>밤학교에서 - 1학년 2반?먯깋</title>
+templates\class_1_2_explore.html:85: <a href="/class_1_2_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_1_3.html:79: <p>1학년 3諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_1_3_explore.html:4: <title>밤학교에서 - 1학년 3반?먯깋</title>
+templates\class_1_3_explore.html:85: <a href="/class_1_3_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_1_4.html:79: <p>1학년 4諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_1_4_explore.html:4: <title>밤학교에서 - 1학년 4반?먯깋</title>
+templates\class_1_4_explore.html:85: <a href="/class_1_4_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_2_1.html:79: <p>2학년 1諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_2_1_explore.html:4: <title>밤학교에서 - 2학년 1반?먯깋</title>
+templates\class_2_1_explore.html:85: <a href="/class_2_1_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_2_2.html:79: <p>2학년 2諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_2_2_explore.html:4: <title>밤학교에서 - 2학년 2반?먯깋</title>
+templates\class_2_2_explore.html:85: <a href="/class_2_2_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_2_3.html:79: <p>2학년 3諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_2_3_explore.html:4: <title>밤학교에서 - 2학년 3반?먯깋</title>
+templates\class_2_3_explore.html:85: <a href="/class_2_3_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_2_4.html:79: <p>2학년 4諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_2_4_explore.html:4: <title>밤학교에서 - 2학년 4반?먯깋</title>
+templates\class_2_4_explore.html:85: <a href="/class_2_4_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_3_1.html:79: <p>{{ message or '?곕━諛섏씠??' }}</p>
+templates\class_3_1_explore.html:4: <title>밤학교에서 - 3학년 1반?먯깋</title>
+templates\class_3_1_explore.html:85: <a href="/class_3_1_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_3_2.html:79: <p>3학년 2諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_3_2_explore.html:4: <title>밤학교에서 - 3학년 2반?먯깋</title>
+templates\class_3_2_explore.html:85: <a href="/class_3_2_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_3_3.html:79: <p>3학년 3諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_3_3_explore.html:4: <title>밤학교에서 - 3학년 3반?먯깋</title>
+templates\class_3_3_explore.html:85: <a href="/class_3_3_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_3_4.html:79: <p>3학년 4諛섏씠?? 臾댁뾿???좉퉴?</p>
+templates\class_3_4_explore.html:4: <title>밤학교에서 - 3학년 4반?먯깋</title>
+templates\class_3_4_explore.html:85: <a href="/class_3_4_explore_desk"><button class="choice-button">梨낆긽 ?쒕엻</button></a>
+templates\class_selection_1f.html:92: <p>紐?諛섏쑝濡?媛덇퉴?</p>
+templates\class_selection_2f.html:92: <p>紐?諛섏쑝濡?媛덇퉴?</p>
+templates\class_selection_3f.html:92: <p>紐?諛섏쑝濡?媛덇퉴?</p>
+templates\dance_room_explore.html:4: <title>밤학교에서 - 무용실?먯깋</title>
+templates\dance_room_radio_empty.html:70: <p class="dialogue">?쇰뵒?ㅻ뒗 鍮꾩뼱?덈떎. 臾댁뼵媛瑜??ｌ뼱???좉쾬 媛숇떎.</p>
+templates\dance_room_radio_options.html:70: <p class="dialogue">移댁꽭???뚯씠?꾨? ?ъ깮?좎닔 ?덉쓣寃?媛숇떎.</p>
+templates\dance_room_radio_options.html:73: <a href="/play_cassette_tape">?ъ깮?섍린</a>
+templates\ending.html:32: // 2. 2珥???"?ㅻ뵫 2" ?쒖떆
+templates\ending.html:34: document.getElementById('message').innerText = '?ㅻ뵫 2. 臾댁궗洹媛';
+templates\ending.html:41: }, 2000); // 留?泥섏쓬 2珥??쒕젅??
+templates\ending_final_monologue.html:37: <p>洹몃젃寃??섎뒗 ?숆탳瑜?鍮좎졇?섏솕?? ?닿? 臾댁뾿??蹂멸구源? ...紐⑤Ⅴ寃좊떎.</p>
+templates\exit_message.html:41: <a href="{{ session.last_page }}" class="btn">?뚯븘媛湲?</a>
+templates\exit_school.html:14: flex-direction: column; /* ?몃줈 諛⑺뼢?쇰줈 ?뺣젹 */
+templates\exit_school.html:29: margin-top: 20px; /* ?꾩そ ?щ갚 異붽? */
+templates\exit_school.html:41: "洹몃젃寃??섎뒗 ?숆탳瑜??섏솕??,
+templates\exit_school.html:42: "?쒖갭??嫄몄뼱 吏묒쑝濡??뚯븘媛꾨떎.",
+templates\exit_school.html:43: "?숈젣??.. ?댁젙?꾨뒗 紐삵빐媛??愿쒖갖寃좎?",
+templates\exit_school.html:44: "?ㅻ뵫1 洹媛"
+templates\exit_school_confirm.html:80: <p>?뺣쭚 ?숆탳瑜??섍??쒓쿋?듬땲源?</p>
+templates\exit_school_locked.html:42: <p class="message">?대씪 ??臾몄씠 ?좉꺼?덉?..? ?꾨Т?섎룄 ?댁뇿媛 ?덉뼱???섍컝???덉쓣嫄?媛숇꽕. 援먮Т?ㅻ줈 媛蹂댁옄..</p>
+templates\fifth_floor_connect_device.html:5: <title>5층?먯깋</title>
+templates\fifth_floor_connect_device.html:77: <p class="dialogue">?꾧린 肄섏꽱?몃떎. ?ш린???꾩옄湲곌린瑜??곌껐?좎닔 ?덉쓣寃?媛숇떎. 萸??곌껐?대낫吏</p>
+templates\fifth_floor_connect_device.html:79: <p class="dialogue">?⑥긽 ?꾩そ??肄섏꽱?멸? ?덈떎. 臾댁뼵媛瑜??ㅼ튂?좎닔 ?덉쓣寃?媛숇떎. ?ㅼ튂??寃껋쓣 李얠븘蹂쇨퉴?</p>
+templates\fifth_floor_connect_device.html:84: <a href="/fifth_floor_install_radio_process">(?쇰뵒???ㅼ튂?섍린)</a>
+templates\fifth_floor_connect_device.html:86: <a href="/fifth_floor/main">?뚯븘媛湲?</a>
+templates\fifth_floor_insert_options.html:5: <title>5층?먯깋</title>
+templates\fifth_floor_insert_options.html:80: <a href="/fifth_floor_insert_cassette_tape">(移댁꽭???뚯씠???ｊ린)</a>
+templates\fifth_floor_insert_options.html:82: <a href="/fifth_floor/main">?뚯븘媛湲?</a>
+templates\fifth_floor_installing_radio.html:5: <title>5층?먯깋</title>
+templates\fifth_floor_installing_radio.html:38: <p>?쇰뵒?ㅻ? ?ㅼ튂?쒕떎.</p>
+templates\fifth_floor_investigating.html:5: <title>5층?먯깋</title>
+templates\fifth_floor_playing_cassette.html:5: <title>5층?먯깋</title>
+templates\fifth_floor_playing_cassette.html:53: <p>移댁꽭???뚯씠?꾨? ?ｋ뒗?? ?몃옒媛 ?섎윭?섏삩??</p>
+templates\fifth_floor_replay_options.html:52: <p class="dialogue">?꾨Т?쇰룄 ?녿떎. ?몃옒媛 ?앸궗?? ?ㅼ떆 ?ъ깮?좉퉴?</p>
+templates\fifth_floor_stairs_decline.html:4: <title>밤학교에서 - ?뚯븘媛湲?</title>
+templates\fourth_floor.html:73: z-index: 10; /* ?ㅻⅨ ?붿냼??媛?ㅼ?吏 ?딅룄濡?z-index 異붽? */
+templates\fourth_floor.html:88: <a href="/library"><button class="choice-button">?꾩꽌愿</button></a>
+templates\index.html:10: background-color: black; /* ?대몢??諛곌꼍??*/
+templates\index.html:18: position: relative; /* ?먯떇 ?붿냼??position 湲곗? */
+templates\index.html:20: min-height: 100vh; /* 理쒖냼 ?믪씠瑜??붾㈃ ?꾩껜濡?*/
+templates\index.html:33: z-index: -1; /* ?댁슜??媛由ъ? ?딅룄濡??ㅻ줈 蹂대깂 */
+templates\index.html:53: <a href="/start" class="button">?쒖옉?섍린</a>
+templates\item_acquired.html:32: /* ??붿갹 */
+templates\item_acquired.html:85: <!-- ??붿갹 -->
+templates\library.html:4: <title>밤학교에서 - ?꾩꽌愿</title>
+templates\library.html:88: <p>?꾩꽌愿?대떎. 梨낆쓣 李얠쓣???덈떎.</p>
+templates\library_explore.html:4: <title>밤학교에서 - ?꾩꽌愿 ?먯깋</title>
+templates\library_explore.html:84: <a href="{{ url_for('library_explore_desk') }}"><button class="choice-button">梨낆긽</button></a>
+templates\library_explore.html:85: <a href="{{ url_for('library_explore_bookshelf') }}"><button class="choice-button">梨낆옣</button></a>
+templates\library_explore.html:86: <a href="{{ url_for('fourth_floor') }}"><button class="choice-button">?뚯븘媛湲?</button></a>
+templates\library_explore.html:90: <a href="{{ url_for('library_explore_options') }}"><button class="choice-button">??議곗궗?섍린</button></a>
+templates\library_explore_options.html:4: <title>밤학교에서 - ?꾩꽌愿 ?먯깋</title>
+templates\library_explore_options.html:83: <a href="{{ url_for('library_explore_desk') }}"><button class="choice-button">梨낆긽 議곗궗?섍린</button></a>
+templates\library_explore_options.html:84: <a href="{{ url_for('library_explore_bookshelf') }}"><button class="choice-button">梨낆옣 議곗궗?섍린</button></a>
+templates\library_explore_options.html:85: <a href="{{ url_for('fourth_floor') }}"><button class="choice-button">?뚯븘媛湲?</button></a>
+templates\music_room.html:90: <p>{{ message or '?뚯븙?ㅼ씠?? 臾댁뾿???좉퉴?' }}</p>
+templates\music_room_exit_options.html:87: <p>?뚯븙?ㅼ씠?? 臾댁뾿???좉퉴?</p>
+templates\music_room_searching.html:6: <title>밤학교에서 - ?먯깋 以?..</title>
+templates\music_room_searching.html:33: p { /* Styling for the "?먯깋以?.." text */
+templates\music_room_searching.html:47: <p>?먯깋以?..</p>
+templates\office_explore.html:4: <title>밤학교에서 - 교무실?먯깋</title>
+templates\outside_school.html:4: <title>밤학교에서 - ?숆탳 諛?</title>
+templates\outside_school.html:26: <p>洹몃젃寃??섎뒗 ?숆탳瑜??섏솕?? ?쒖갭??嫄몄뼱 吏묒쑝濡??뚯븘媛꾨떎. ?숈젣??... ?댁젙?꾨뒗 紐삵빐媛??愿쒖갖寃좎?.</p>
+templates\restart_confirm.html:10: background-color: black; /* 寃???諛곌꼍 */
+templates\restart_confirm.html:18: /* 諛곌꼍 ?대?吏 ?쒓굅 */
+templates\restroom.html:89: <p>?붿옣?ㅼ씠?? 臾댁뾿???좉퉴?</p>
+templates\restroom_2f.html:89: <p>2층?붿옣?ㅼ씠?? 臾댁뾿???좉퉴?</p>
+templates\restroom_3f.html:95: <p>{{ '3층?붿옣?ㅼ씠?? 嫄곗슱??... ?섎쭔 鍮꾩튂怨??덈떎.' if mirror_broken else ('채율???꾩쭅 嫄곗슱 ?덉뿉 ?덈떎.' if can_talk_chaeyul else '3층?붿옣?ㅼ씠?? 臾댁뾿???좉퉴?') }}</p>
+templates\restroom_explore.html:4: <title>밤학교에서 - 화장실?먯깋</title>
+templates\searching.html:6: <title>밤학교에서 - ?먯깋 以?..</title>
+templates\searching.html:47: <div class="searching-text">?먯깋 以?..</div>
+templates\start.html:79: <p id="dialog-text">?쒕갇以묒쓽 ?숆탳. ?댁씪源뚯? ?댁빞?섎뒗 ?숈젣瑜??숆탳???먭퀬? 踰꾨졇??</p>
+templates\start.html:85: document.getElementById('dialog-text').innerHTML = '??諛섏? 3학년 1반.. ??諛섏쑝濡?媛?쇳븳??<br>?곗꽑 怨꾨떒?쇰줈 媛蹂쇨퉴';
+templates\fifth_floor\install_radio.html:29: <p>?쇰뵒?ㅻ? ?ㅼ튂?쒕떎.</p>
+templates\fifth_floor\main.html:89: <a href="/fifth_floor/main"><button class="choice-button">?뚯븘媛湲?</button></a>
+templates\fifth_floor\main.html:93: <a href="/fourth_floor"><button class="choice-button">4痢듭쑝濡??뚯븘媛湲?</button></a>
+templates\fifth_floor\main.html:96: <a href="/fourth_floor"><button class="choice-button">4痢듭쑝濡??뚯븘媛湲?</button></a>
+templates\fifth_floor\main.html:99: <a href="/fourth_floor"><button class="choice-button">4痢듭쑝濡??뚯븘媛湲?</button></a>
+templates\fifth_floor\main.html:104: <p>{{ message | default('5痢듭뿉 ?꾩갑?덈떎. 臾댁뾿???좉퉴?', true) }}</p>
+templates\fifth_floor\play_cassette.html:29: <p>移댁꽭???뚯씠?꾨? ?ｋ뒗?? ?몃옒媛 ?섎윭?섏삩??</p>
+templates\fifth_floor\radio_options.html:85: <a href="/fifth_floor_play_cassette"><button class="choice-button">移댁꽭???뚯씠??</button></a>
+templates\신오\gift_radio.html:109: <p>?좎삤 : ???몃옒 ?덈Т ?ㅻ옖留뚯뿉 ?ㅼ뼱??萸붽? 湲곕텇??醫뗫꽕. ?닿굅 ?좊Ъ濡?以꾧쾶 媛?멸?!</p>
+templates\신오\intro.html:110: <p>?좎삤 : ?! ???몃옒 ?ㅻ옖留뚯씠??</p>
+templates\신오\introduce.html:105: <a href="/shino_gift_radio"><button class="choice-button">??諛섍???</button></a>
+templates\신오\singing.html:29: <p>?꾧퉴 ?꾩꽦???낅낫?? ?닿굅硫?移댁꽭???뚯씠?꾨? ??좏븷???덉? ?딆쓣源?</p>
+templates\주단\ask_cassette_tape.html:106: <a href="/joodan_check_items"><button class="choice-button">(?ㅻⅨ 吏덈Ц?섍린)</button></a>
+templates\주단\ask_cassette_tape.html:110: <p>주단 : 3痢듭쓽 ?붿옣?ㅼ뿉 ?ㅻ젮蹂댁떗?쒖슂. 嫄곌린??洹멸구 媛吏?遺꾩씠 怨꾩떗?덈떎.</p>
+templates\주단\ask_radio.html:106: <a href="/joodan_check_items"><button class="choice-button">(?ㅻⅨ 吏덈Ц?섍린)</button></a>
+templates\주단\ask_score.html:113: <a href="{{ url_for('joodan_all_items_dialogue') }}"><button class="choice-button">???꾨? 媛吏怨??덉뼱.</button></a>
+templates\주단\ask_score.html:115: <a href="{{ url_for('joodan_check_items') }}"><button class="choice-button">(?ㅻⅨ 吏덈Ц?섍린)</button></a>
+templates\주단\ask_score.html:119: <p>주단 : 洹멸굔 ?쒓? ?꾩??쒕┫???덇쿋援곗슂. ?명듃???ㅼ꽑吏媛 ?덉쑝硫??쒓? ?곸뼱?쒕━寃좎뒿?덈떎.</p>
+templates\주단\check_items.html:107: <a href="/joodan_quest_complete_intro"><button class="choice-button">???꾨? 媛吏怨??덉뼱.</button></a>
+templates\주단\check_items.html:110: <a href="/joodan_ask_cassette_tape"><button class="choice-button">移댁꽭???뚯씠?꾨뒗 ?대뵒??援ы빐?</button></a>
+templates\주단\check_items.html:113: <a href="/joodan_ask_radio"><button class="choice-button">?쇰뵒?ㅻ뒗 ?대뵒??援ы빐?</button></a>
+templates\주단\check_items.html:118: <a href="/fourth_floor"><button class="choice-button">洹몃읆 援ы븯???ㅻ??ш쾶</button></a>
+templates\주단\escape_items_needed.html:110: <p>주단:?? 나가기?꾪빐???멸?吏 臾쇨굔???꾩슂?⑸땲?? ?몃옒媛 ?닿릿 移댁꽭???뚯씠?? ?뚯씠?꾨? ?ъ깮???쇰뵒?? 洹몃━怨??낅낫 ?낅땲??</p>
+templates\주단\escape_method_details.html:110: <p>주단 : ?뚭쿋?듬땲?? 洹몃읆 諛⑸쾿???뚮젮?쒕━二?</p>
+templates\주단\escape_method_intro.html:110: <p>주단 : ??떆??洹몃젃援곗슂. 洹몃젃?ㅻ㈃ ?덉텧 諛⑸쾿???뚮젮?쒕━寃좎뒿?덈떎. 沅곴툑?섏떗?덇퉴?</p>
+templates\주단\give_small_note.html:125: <a href="/joodan_get_score_from_note"><button class="choice-button">?명듃 ?뚮젮諛쏄린</button></a>
+templates\주단\give_small_note.html:126: <a href="/joodan_check_items"><button class="choice-button">(?ㅻⅨ 吏덈Ц?섍린)</button></a>
+templates\주단\give_small_note.html:130: <p>주단 : ???닿굅硫?異⑸텇?섍뎔??</p>
+templates\주단\give_unfinished_score.html:125: <a href="/joodan_get_score_from_unfinished"><button class="choice-button">?낅낫 諛쏄린</button></a>
+templates\주단\give_unfinished_score.html:126: <a href="/joodan_check_items"><button class="choice-button">(?ㅻⅨ 吏덈Ц?섍린)</button></a>
+templates\주단\give_unfinished_score.html:130: <p>주단 : ?닿굔.... ...?? ?닿굅硫??⑸땲?? ?좎떆留?湲곕떎??二쇱꽭??</p>
+templates\주단\introduce_cliche.html:110: <p>주단 : ?꾩븘. ??諛ㅼ쨷??媛뉙엺 ?щ엺?댁떊媛?? ?뷀븳 ?대━?곗짛. 李멸퀬濡?????먯쓽濡??닿납???덈뒗 寃껋씠??嫄깆젙?섏? ?딆쑝?붾룄 ?⑸땲?? 3학년 4반주단 ?낅땲??</p>
+templates\주단\introduce_name.html:110: <p>주단 : ???????쓬 洹몃옒?? 주단?대씪怨?遺덈윭二쇱떆二?</p>
+templates\주단\joodan_all_items_dialogue.html:110: <p>주단 : ?? 洹몃젃援곗슂. 洹몃읆 媛蹂댁떗?쒖슂. 5층媛뺣떦?먯꽌 移댁꽭???뚯씠?꾨? ?怨??몃옒瑜?遺瑜댁떆硫대맗?덈떎.</p>
+templates\주단\joodan_score_ready.html:107: <a href="{{ url_for('joodan_check_items') }}"><button class="choice-button">?ㅻⅨ 吏덈Ц?섍린</button></a>
+templates\주단\quest_complete_intro.html:110: <p>주단 : ?? 洹몃젃援곗슂. 洹몃읆 媛蹂댁떗?쒖슂. 5층媛뺣떦?먯꽌 移댁꽭???뚯씠?꾨? ?怨??몃옒瑜?遺瑜댁떆硫대맗?덈떎.</p>
+templates\주단\return_comic_books.html:110: <p>주단 : ...! ?? ?쒓쾬?낅땲?? 媛?몃떎 二쇱뀛??媛먯궗?섍뎔??</p>
+templates\주단\understood.html:106: <a href="/joodan_escape_method_intro"><button class="choice-button">?? ?대뼸寃??뚯븯??</button></a>
+templates\주단\understood.html:110: <p>???숆탳??媛뉙엳?⑥뒿?덇퉴?</p>
+templates\채율\break_mirror.html:41: <p id="initial-text">嫄곗슱??源⑦듃?ㅻ낵源?</p>
+templates\채율\get_cassette_tape.html:116: <p>(移댁꽭???뚯씠?꾨떎. ?쇰뵒?ㅺ? ?덈떎硫??ъ깮?좎닔 ?덈떎.)</p>
+templates\채율\hello.html:115: <p>채율 : ?? ??채율?댁빞. 留뚮굹??諛섍???</p>
+templates\채율\why_mirror.html:117: <a href="{{ url_for('exit_to_restroom') }}"><button class="choice-button">??.. ?먯쑝濡??덈맆嫄?媛숈??? ?꾧뎄瑜?李얠븘蹂쇨쾶.</button></a>
+templates\청려\help_offer.html:99: <a href="/fifth_floor/main"><button class="choice-button">5痢듭쑝濡??뚯븘媛湲?</button></a>
+templates\청려\help_offer.html:103: <p>청려 : 萸?.. ?뺤꽦??遊먯꽌 ?꾩? ?쒕┫寃뚯슂. (?뺣Ц ?댁뇿瑜??살뿀??)</p>
+templates\청려\joodan_knowledge.html:105: <a href="/cheongryeo_trapped_question"><button class="choice-button">??.. ???꾩떆?ㅼ슂...?</button></a>
+templates\청려\joodan_knowledge.html:109: <p>청려 : 洹???留먭낀 ?대윴嫄??뚮젮以??щ엺? ?붿씠?????숆탳???놁쑝?덇퉴. ?닿쾬??嫄붽? ?뚮젮以ъ쓣?뚭퀬.</p>
+templates\청려\joodan_reveal.html:109: <p>청려 : ?꾩븘. ?꾧? ?뚮젮以щ뒗吏??六뷀븯吏. 주단?댁짛?</p>

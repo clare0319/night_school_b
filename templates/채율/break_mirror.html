@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>채율</title>
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Reverted to white */
+            text-align: center;
+            font-family: "Malgun Gothic", sans-serif; /* Reverted to original font */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='거울.png') }}");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+        #break-text {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <p id="initial-text">거울을 깨트린다.</p>
+    <p id="break-text">거울이 깨졌다.</p>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('initial-text').style.display = 'none';
+            document.body.style.backgroundColor = 'black';
+            document.getElementById('break-text').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = "{{ url_for('break_mirror_process') }}";
+            }, 1000);
+        }, 2000);
+    </script>
+</body>
+</html>
+

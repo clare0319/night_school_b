@@ -1,0 +1,78 @@
+:root {
+    --ui-panel-width: min(92vw, 1120px);
+    --ui-dialog-bottom: clamp(18px, 2.8vh, 30px);
+    --ui-dialog-height: clamp(120px, 22vh, 170px);
+    --ui-choice-gap: clamp(8px, 1.1vh, 12px);
+}
+
+body {
+    overflow: hidden;
+}
+
+.ui-layer {
+    position: fixed !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+.ui-layer .dialog-box,
+.dialog-box {
+    position: fixed !important;
+    left: 50vw !important;
+    bottom: var(--ui-dialog-bottom) !important;
+    transform: translateX(-50%) !important;
+    width: var(--ui-panel-width) !important;
+    min-height: var(--ui-dialog-height) !important;
+    height: auto !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border-radius: 15px !important;
+    padding: clamp(16px, 2.2vw, 24px) !important;
+    box-sizing: border-box !important;
+    color: black !important;
+    font-size: clamp(1rem, 1.2vw, 1.2em) !important;
+    pointer-events: auto !important;
+    z-index: 2 !important;
+}
+
+.ui-layer .choices,
+.choices {
+    position: fixed !important;
+    left: 50vw !important;
+    bottom: calc(var(--ui-dialog-bottom) + var(--ui-dialog-height) + 16px) !important;
+    transform: translateX(-50%) !important;
+    width: var(--ui-panel-width) !important;
+    max-width: 1120px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: var(--ui-choice-gap) !important;
+    pointer-events: auto !important;
+    z-index: 3 !important;
+}
+
+.choices a,
+.choices button,
+.choice-button {
+    pointer-events: auto !important;
+}
+
+.choice-button {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 2px solid white !important;
+    border-radius: 20px !important;
+    padding: clamp(8px, 1.1vw, 12px) clamp(16px, 2.2vw, 24px) !important;
+    color: white !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    font-size: clamp(0.95rem, 1vw, 1rem) !important;
+    cursor: pointer !important;
+    width: auto !important;
+    max-width: min(400px, 80vw) !important;
+}
+
+.bag-button-container {
+    position: fixed !important;
+    top: clamp(18px, 2.6vw, 32px) !important;
+    left: calc(50vw - var(--ui-panel-width) / 2 + clamp(10px, 1.4vw, 18px)) !important;
+    z-index: 4 !important;
+}

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>5층 계단</title>
+    <meta http-equiv="refresh" content="3;url=/fifth_floor_unlocked_message">
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Reverted to white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 2em;
+            font-family: "Malgun Gothic", sans-serif; /* Reverted to original font */
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='학교.png') }}");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <p>여는중...</p>
+</body>
+</html>
+

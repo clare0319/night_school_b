@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>5층 재생 옵션</title>
+    <style>
+        body {
+            background-color: black; /* Kept black for consistency with transparency */
+            color: #fff; /* Reverted to white */
+            font-family: 'Courier New', Courier, monospace; /* Reverted to original font */
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='학교.png') }}");
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+        .options a {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 200px;
+            background-color: #333; /* Reverted to original */
+            color: #fff; /* Reverted to original */
+            text-decoration: none;
+            border: 1px solid #555; /* Reverted to original */
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 4em;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="dialogue-box">
+            <p class="dialogue">카세트를 넣었다. 재생해볼까?</p>
+        </div>
+        <div class="options">
+            <a href="/fifth_floor_insert_cassette_tape">예</a>
+            <a href="/fifth_floor/main">아니요</a>
+        </div>
+    </div>
+</body>
+</html>
+
