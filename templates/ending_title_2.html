@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>엔딩</title>
     <style>
         body {
@@ -36,6 +37,17 @@
             letter-spacing: 3px;
             margin-bottom: 15px;
             text-transform: uppercase;
+        }
+
+        /* 모바일 대응 미디어 쿼리 (가로폭 768px 이하) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.3em;
+                padding: 20px;
+            }
+            .credit-box {
+                width: 90%;
+            }
         }
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">

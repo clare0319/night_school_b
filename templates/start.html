@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>밤학교에서 - 게임 시작</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +66,25 @@
             cursor: pointer;
             width: auto;
             max-width: 400px;
+        }
+        
+        /* 모바일 대응 미디어 쿼리 (가로폭 768px 이하) */
+        @media (max-width: 768px) {
+            .dialog-box {
+                font-size: 1em;
+                height: 30%;
+                padding: 15px;
+            }
+            .choices {
+                bottom: 40%;
+                width: 90%;
+            }
+            .choice-button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+                width: 100%;
+                max-width: none;
+            }
         }
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">

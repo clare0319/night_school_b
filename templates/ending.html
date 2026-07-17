@@ -3,6 +3,7 @@
 <head>
     <!-- 브라우저가 한글을 올바르게 인식하도록 meta 태그를 추가했습니다 -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>밤학교에서 - 성공</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,6 +41,17 @@
             letter-spacing: 3px;
             margin-bottom: 15px;
             text-transform: uppercase;
+        }
+
+        /* 모바일 대응 미디어 쿼리 (가로폭 768px 이하) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 1.3em;
+                padding: 20px;
+            }
+            .credit-box {
+                width: 90%;
+            }
         }
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
