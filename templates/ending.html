@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <!-- 브라우저가 한글을 올바르게 인식하도록 meta 태그를 추가했습니다 -->
@@ -13,6 +13,7 @@
             color: white;
             font-family: 'Noto Sans KR', sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -20,11 +21,35 @@
             font-size: 2em;
             text-align: center;
         }
+        .fade-content {
+            transition: opacity 0.8s ease-in-out;
+            opacity: 1;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+        .credit-box {
+            display: none;
+            color: #d4af37;
+            text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+            font-weight: 300;
+        }
+        .credit-title {
+            font-size: 0.6em;
+            color: #888;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
 </head>
 <body>
-    <div id="message">후우... 힘든일이 많았다</div>
+    <div id="message" class="fade-content">후우... 힘든일이 많았다</div>
+    <div id="credit-box" class="fade-content credit-box">
+        <div class="credit-title">Staff Credits</div>
+        <div id="credit-content" style="font-size: 1.2em;"></div>
+    </div>
 
     <script>
         setTimeout(() => {
@@ -35,9 +60,40 @@
             setTimeout(() => {
                 document.getElementById('message').innerText = '엔딩 2. 무사귀가';
 
-                // 3. 3초 후 메인 페이지로 이동
+                // 3. 3초 후 크레딧 표시
                 setTimeout(() => {
-                    window.location.href = '/';
+                    const messageEl = document.getElementById('message');
+                    messageEl.classList.add('fade-out');
+                    
+                    setTimeout(() => {
+                        messageEl.style.display = 'none';
+                        const creditBox = document.getElementById('credit-box');
+                        const creditContent = document.getElementById('credit-content');
+                        
+                        creditBox.style.display = 'block';
+                        creditBox.classList.add('fade-out');
+                        
+                        setTimeout(() => {
+                            creditContent.innerText = "배경, 코딩작업 : 빛나는 노란콩";
+                            creditBox.classList.remove('fade-out');
+                        }, 50);
+
+                        setTimeout(() => {
+                            creditBox.classList.add('fade-out');
+                            
+                            setTimeout(() => {
+                                creditContent.innerText = "캐릭터 삽화 : 하움";
+                                creditBox.classList.remove('fade-out');
+                                
+                                setTimeout(() => {
+                                    creditBox.classList.add('fade-out');
+                                    setTimeout(() => {
+                                        window.location.href = '/';
+                                    }, 800);
+                                }, 2000);
+                            }, 800);
+                        }, 2800);
+                    }, 800);
                 }, 3000);
             }, 2000);
         }, 2000); // 맨 처음 2초 딜레이

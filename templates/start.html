@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -70,6 +70,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
 </head>
 <body>
+    <!-- 검은색 페이드 오버레이 레이어 -->
+    <div id="start-fade-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: black; z-index: 9999; transition: opacity 1.5s ease-in-out; pointer-events: none; opacity: 1;"></div>
 
     <div id="choices-container" class="choices">
         <button class="choice-button" onclick="proceed()">...</button>
@@ -87,7 +89,17 @@
             // 선택지 변경
             document.getElementById('choices-container').innerHTML = '<a href="/stairs"><button class="choice-button">계단으로 이동</button></a>';
         }
-    </script>
 
+        // 페이지 로드 시 검은 화면에서 부드럽게 밝아지는 연출
+        window.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('start-fade-overlay');
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 1500);
+            }, 100);
+        });
+    </script>
 </body>
 </html>

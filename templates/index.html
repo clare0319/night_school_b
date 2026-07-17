@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -47,11 +47,160 @@
             font-size: 3.5em; /* 버튼 글자 크기 증가 */
         }
     </style>
+    <style>
+        #opening-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #050505;
+            z-index: 9999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Dokdo', sans-serif;
+        }
+        .fade-text {
+            transition: opacity 0.8s ease-in-out;
+            opacity: 1;
+        }
+        .fade-out {
+            opacity: 0 !important;
+        }
+        #warning-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .warning-title {
+            font-size: 5em;
+            color: #ff3333;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 15px rgba(255, 51, 51, 0.7);
+            font-weight: bold;
+        }
+        .warning-body {
+            max-width: 800px;
+            line-height: 1.7;
+            word-break: keep-all;
+            color: #f0f0f0;
+            text-shadow: 0 0 5px rgba(240, 240, 240, 0.3);
+            font-size: 2.8em;
+        }
+        #intro-content {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .intro-text {
+            max-width: 800px;
+            line-height: 1.7;
+            word-break: keep-all;
+            opacity: 0;
+            transform: translateY(20px);
+            text-shadow: 0 0 10px rgba(241, 250, 238, 0.4);
+            font-size: 3em;
+            color: #f1faee;
+        }
+        .intro-text.animate-in {
+            animation: slideUpFadeIn 1.5s ease-out forwards;
+        }
+        .intro-text.animate-out {
+            animation: slideUpFadeOut 1.5s ease-in forwards;
+        }
+        @keyframes slideUpFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideUpFadeOut {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+    </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
 </head>
 <body>
-    <h1>밤학교에서</h1>
-    <a href="/start" class="button">시작하기</a>
-    <a href="/restart_confirm" class="button">다시하기</a>
+    <div id="main-content">
+        <h1>밤학교에서</h1>
+        <a href="#" id="start-btn" class="button">시작하기</a>
+    </div>
+    
+    <!-- 단일 오버레이 레이어 (배경 고정) -->
+    <div id="opening-overlay">
+        <!-- 1단계: 주의 사항 -->
+        <div id="warning-content" class="fade-text">
+            <div class="warning-title">⚠️ 주 의 (WARNING)</div>
+            <p class="warning-body">이 게임은 카카오 페이지의 웹소설, <br>&lt;데뷔못하면 죽는 병 걸림&gt;<br>을 원작으로 하여 제작되었습니다. 플레이에 유의하여 주시기 바랍니다.</p>
+        </div>
+
+        <!-- 2단계: 인트로 독백 -->
+        <div id="intro-content">
+            <p id="intro-message" class="intro-text">한밤중의 OO고등학교...<br>난 그곳에 도착했다...</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('start-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('main-content').style.display = 'none';
+            
+            const overlay = document.getElementById('opening-overlay');
+            const warning = document.getElementById('warning-content');
+            const intro = document.getElementById('intro-content');
+            const introMessage = document.getElementById('intro-message');
+            
+            // 검은 배경 켜기 (그대로 유지됨)
+            overlay.style.display = 'flex';
+            
+            // 1. 주의사항 3초 대기
+            setTimeout(function() {
+                // 2. 주의사항 텍스트만 페이드아웃 (0.8초)
+                warning.classList.add('fade-out');
+                
+                setTimeout(function() {
+                    warning.style.display = 'none';
+                    
+                    // 3. 인트로 텍스트 레이아웃 켜기
+                    intro.style.display = 'flex';
+                    
+                    // 스르륵 올라오며 페이드인
+                    setTimeout(() => {
+                        introMessage.classList.add('animate-in');
+                    }, 50);
+
+                    // 4. 인트로 문구 2초 유지 후 스르륵 사라짐 (페이드아웃 + 슬라이드)
+                    setTimeout(function() {
+                        introMessage.classList.remove('animate-in');
+                        introMessage.classList.add('animate-out');
+                        
+                        // 5. 문구 사라지고 자연스럽게 /start로 리디렉션
+                        setTimeout(function() {
+                            window.location.href = "{{ url_for('start') }}";
+                        }, 1500);
+                    }, 3500);
+                }, 800);
+            }, 3000);
+        });
+    </script>
 </body>
 </html>

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>엔딩</title>
-    <meta http-equiv="refresh" content="3;url={{ url_for('title') }}">
     <style>
         body {
             background-color: black;
@@ -18,10 +17,71 @@
             text-align: center;
             overflow: hidden;
         }
+        .fade-content {
+            transition: opacity 0.8s ease-in-out;
+            opacity: 1;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+        .credit-box {
+            display: none;
+            color: #d4af37;
+            text-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+            font-weight: 300;
+        }
+        .credit-title {
+            font-size: 0.6em;
+            color: #888;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
     </style>
     <link rel="stylesheet" href="{{ url_for('static', filename='shared_ui.css') }}">
 </head>
 <body>
-    <p>엔딩 2. 밤학교에서...</p>
+    <p id="message" class="fade-content">엔딩 2. 밤학교에서...</p>
+    <div id="credit-box" class="fade-content credit-box">
+        <div class="credit-title">Staff Credits</div>
+        <div id="credit-content" style="font-size: 1.2em;"></div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const messageEl = document.getElementById('message');
+            messageEl.classList.add('fade-out');
+            
+            setTimeout(() => {
+                messageEl.style.display = 'none';
+                const creditBox = document.getElementById('credit-box');
+                const creditContent = document.getElementById('credit-content');
+                
+                creditBox.style.display = 'block';
+                creditBox.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    creditContent.innerText = "배경, 코딩작업 : 빛나는 노란콩";
+                    creditBox.classList.remove('fade-out');
+                }, 50);
+
+                setTimeout(() => {
+                    creditBox.classList.add('fade-out');
+                    
+                    setTimeout(() => {
+                        creditContent.innerText = "캐릭터 삽화 : 하움";
+                        creditBox.classList.remove('fade-out');
+                        
+                        setTimeout(() => {
+                            creditBox.classList.add('fade-out');
+                            setTimeout(() => {
+                                window.location.href = "{{ url_for('title') }}";
+                            }, 800);
+                        }, 2000);
+                    }, 800);
+                }, 2800);
+            }, 800);
+        }, 3000);
+    </script>
 </body>
 </html>
