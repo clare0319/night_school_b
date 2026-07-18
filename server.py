@@ -1,4 +1,4 @@
-﻿from flask import Flask, render_template, redirect, url_for, session, request
+from flask import Flask, render_template, redirect, url_for, session, request
 import time  # time 모듈 추가
 
 app = Flask(__name__)
@@ -692,7 +692,16 @@ def restroom_3f():
     session['current_restroom_floor'] = 3
     can_talk_chaeyul = session.get('chaeyul_intro_seen') and not session.get('mirror_broken')
     mirror_broken = session.get('mirror_broken', False)
-    return render_template('restroom_3f.html', can_talk_chaeyul=can_talk_chaeyul, mirror_broken=mirror_broken)
+    
+    bag = session.get('items', [])
+    has_required_items = '교과서' in bag and '숙제' in bag
+    
+    return render_template(
+        'restroom_3f.html',
+        can_talk_chaeyul=can_talk_chaeyul,
+        mirror_broken=mirror_broken,
+        has_required_items=has_required_items
+    )
 
 @app.route('/restroom_3f_explore_mirror')
 def restroom_3f_explore_mirror():
@@ -700,6 +709,9 @@ def restroom_3f_explore_mirror():
 
 @app.route('/chaeyul_intro')
 def chaeyul_intro():
+    bag = session.get('items', [])
+    if '교과서' not in bag or '숙제' not in bag:
+        return redirect(url_for('restroom_3f'))
     if session.get('chaeyul_intro_seen') and not session.get('mirror_broken'):
         return redirect(url_for('chaeyul_why_mirror'))
     session['chaeyul_intro_seen'] = True
@@ -707,10 +719,16 @@ def chaeyul_intro():
 
 @app.route('/restroom_3f_flicker')
 def restroom_3f_flicker():
+    bag = session.get('items', [])
+    if '교과서' not in bag or '숙제' not in bag:
+        return redirect(url_for('restroom_3f'))
     return render_template('restroom_3f_flicker.html')
 
 @app.route('/restroom_3f_after_flicker')
 def restroom_3f_after_flicker():
+    bag = session.get('items', [])
+    if '교과서' not in bag or '숙제' not in bag:
+        return redirect(url_for('restroom_3f'))
     return render_template('채율/intro.html')
 
 @app.route('/restroom_3f_message2')
@@ -951,11 +969,13 @@ def science_room():
 @app.route('/club_room')
 def club_room():
     session['last_page'] = request.url
-    if '정문열쇠' in session.get('items', []):
+    bag = session.get('items', [])
+    has_required_items = '교과서' in bag and '숙제' in bag
+    if '정문열쇠' in bag:
         if session.get('joodan_key_talked'):
             return redirect(url_for('joodan_key_talk_3'))
         return redirect(url_for('joodan_key_talk_1'))
-    if '도서 대여증' in session.get('items', []) or session.get('joodan_introduced'):
+    if ('도서 대여증' in bag and has_required_items) or session.get('joodan_introduced'):
         if session.get('joodan_introduced'):
             return redirect(url_for('club_room_revisit'))
         return redirect(url_for('joodan_intro'))
@@ -1186,6 +1206,9 @@ def cheongryeo_get_key_process():
 
 @app.route('/joodan_intro')
 def joodan_intro():
+    bag = session.get('items', [])
+    if '도서 대여증' not in bag or '교과서' not in bag or '숙제' not in bag:
+        return redirect(url_for('club_room'))
     return render_template('주단/intro.html')
 
 @app.route('/joodan_introduce_cliche')

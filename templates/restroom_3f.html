@@ -86,8 +86,10 @@
         {% if mirror_broken %}
         {% elif can_talk_chaeyul %}
         <a href="{{ url_for('chaeyul_why_mirror', from_revisit=1) }}"><button class="choice-button">채율과 대화하기</button></a>
-        {% else %}
+        {% elif has_required_items %}
         <a href="/restroom_3f_flicker"><button class="choice-button">탐색하기</button></a>
+        {% else %}
+        <a href="/restroom_explore"><button class="choice-button">탐색하기</button></a>
         {% endif %}
         <a href="/third_floor"><button class="choice-button">나가기</button></a>
     </div>
